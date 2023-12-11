@@ -9,9 +9,6 @@ class Component {
     virtual void PushBack(std::shared_ptr<Component> g) {
         throw "Not implementd";
     }
-    virtual void Remove(std::shared_ptr<Component> g) {
-        throw "Not implementd";
-    }
     virtual ~Component() = default;
 };
 
@@ -26,9 +23,10 @@ class Composite : public Component {
     void PushBack(std::shared_ptr<Component> g) override {
         children.push_back(g);
     }
-    void Remove(std::shared_ptr<Component> g) override { children.remove(g); }
 
   private:
+    // Here probably is beter to work with shared_ptr because we may want to
+    // return a reference to a particular Composite element
     std::list<std::shared_ptr<Component>> children;
 };
 
