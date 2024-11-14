@@ -1,0 +1,1 @@
+This repository is a colection of design patterns inpired by [Design Patterns: Elements of Reusable Object-Oriented Software](https://en.wikipedia.org/wiki/Design_Patterns) and [Refactoring.Guru](https://refactoring.guru/design-patterns/catalog).
